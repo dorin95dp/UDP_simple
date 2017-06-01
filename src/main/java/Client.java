@@ -6,7 +6,7 @@ class Client {
         byte[] sendData = new byte[1024];
         byte[] receiveData = new byte[1024];
         DatagramSocket clientSocket = new DatagramSocket();
-        InetAddress IPAddress = InetAddress.getByName("localhost");
+        InetAddress IPAddress = InetAddress.getByName("172.31.224.23");
 
         // get from user
         BufferedReader inFromUser = new BufferedReader(new InputStreamReader(System.in));
@@ -18,8 +18,8 @@ class Client {
 //        // send data to server
 //        clientSocket.send(sendPacket);
 
-        for (int i = 0; i < 10; i++) {
-            String sentence = Double.toString(Math.random());
+        for (int i = 0; i < 100; i++) {
+            String sentence = Integer.toString(i);
             System.out.println("nr = " + sentence);
 
             sendData = sentence.getBytes();
